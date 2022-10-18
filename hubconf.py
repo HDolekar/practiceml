@@ -31,7 +31,7 @@ def trainTest():
 
 #train_set, test_set = trainTest()
 
-def loader(train_set,test_set):
+def loader(train_set,test_set,batch_size=4):
   trainloader = torch.utils.data.DataLoader(train_set, batch_size=batch_size,
                                           shuffle=True, num_workers=2)
   testloader = torch.utils.data.DataLoader(test_set, batch_size=batch_size,
