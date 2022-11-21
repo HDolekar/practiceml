@@ -120,7 +120,7 @@ def get_metrics(model1,X,y):
   #print(prec)
   f1=f1_score(y_test,y_pred_test,average='macro')
   
-  fpr, tpr, thresholds = metrics.roc_curve(y, ypred_test, pos_label=2)
+  fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_test, pos_label=2)
   auc = metrics.auc(fpr, tpr)
   
   #auc=roc_auc_score(y_test,y_pred_test,multi_class='ovr')
